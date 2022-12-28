@@ -9,19 +9,6 @@
     "dev": "nodemon ./bin/www",
     "seed": "npx run-func .\\database\\DBSeed.js DBSeed"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/theanhtutai1998/datn-server.git"
-  },
-  "keywords": [
-    "DATN"
-  ],
-  "author": "Anh Nguyen",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/theanhtutai1998/datn-server/issues"
-  },
-  "homepage": "https://gitlab.com/theanhtutai1998/datn-server#readme",
   "dependencies": {
     "@sendgrid/mail": "^7.7.0",
     "axios": "^1.1.3",
