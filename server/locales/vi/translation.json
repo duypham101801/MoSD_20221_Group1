@@ -1,0 +1,22 @@
+{
+    "validation_failed": "Xác thực không thành công!",
+
+    "required_email": "Email là bắt buộc!",
+    "required_phone": "Số điện thoại là bắt buộc!",
+    "required_lastName": "Họ là bắt buộc!",
+    "required_firstName": "Tên là bắt buộc!",
+    "required_password": "Mật khẩu là bắt buộc!",
+    "required_role": "Vai trò là bắt buộc!",
+    "required_alphabetical": "Bắt buộc là kí tự alpha!",
+
+    "confim_password_error": "Mật khẩu xác nhận không chính xác!",
+
+    "invalid_email": "Địa chỉ email không hợp lệ!",
+    "invalid_phone": "Số điện thoại không hợp lệ!",
+
+    "existed_account": "Tài khoản đã tồn tại!",
+    "register_success": "Tài khoản đã được tạo thành công! ",
+    "unknown_error": "Lỗi không xác định!",
+    "login_success": "Đăng nhập thành công!",
+    "incorrect_login": "Tên địa chỉ email hoặc mật khẩu không đúng!"
+}

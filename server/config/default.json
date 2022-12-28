@@ -1,0 +1,35 @@
+{
+  "role": {
+    "admin": "admin",
+    "sale": "sale",
+    "editor": "editor"
+  },
+  "expiredTime": {
+    "access_token_exp": 300,
+    "refresh_token_exp": 15552000
+  },
+  "seed": {
+    "urlAvatar": "https://nghiduongngoaio.com/wp-content/uploads/2021/06/cover-night-out-001-1024x683.jpg",
+    "urlThumb": "https://nghiduongngoaio.com/wp-content/uploads/2022/02/canh-quan-48-300x225.jpg",
+    "urlFile": "https://docs.google.com/document/d/1Ha1HVZpXezhsNWVy_8u6DDYDSElzQFfau4yReBJg0tI/edit#heading=h.oqmckd6h0n6v"
+  },
+  "default": {
+    "countArea": 0
+  },
+  "type": {
+    "area": "area",
+    "house": "house"
+  },
+  "paramId": {
+    "area": "area_id",
+    "house": "house_id",
+    "user": "user_id",
+    "category_area": "category_area_id",
+    "category_house": "category_house_id",
+    "area_file": "area_file_id",
+    "area_image": "area_image_id",
+    "house_file": "house_file_id",
+    "house_image": "house_image_id"
+  },
+  "regex_phone": "(84|0[3|5|7|8|9])+([0-9]{8})\\b"
+}

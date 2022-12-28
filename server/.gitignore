@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+# env
+# .env
+
+# other
+.prettierrc
+package-lock.json
