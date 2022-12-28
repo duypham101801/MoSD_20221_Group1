@@ -1,0 +1,44 @@
+/* blur -    background-color: rgba(230, 234, 237, 1.00);   */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*   Roboto */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1c1e21;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  line-height: 1.2rem;
+}
+
+.error {
+  color: #e1341e;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.logo {
+  height: 92px;
+  aspect-ratio: auto 272 / 92;
+}
+
+/* <img className="logo" src={logo} alt="Travelo" /> */
