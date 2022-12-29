@@ -1,0 +1,71 @@
+@import "../../component/Search/search";
+
+
+
+.hero {
+  padding: 20vh 0.5rem 0 0.5rem;
+  position: relative;
+
+  width: 100%;
+  //  height: 100vh;
+
+  .hero-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    // margin-top: 100px;
+    // padding: 0px 80px;
+  }
+
+  .logo-container {
+    height: calc(100% - 560px);
+
+    max-height: 290px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+ 
+
+  .title {
+    height: calc(100% - 560px);
+    max-height: 290px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  .sub-title {
+    text-align: center;
+    padding-top: 0.2rem;
+  }
+
+  // .search-form {
+  //   width: 75%;
+  // }
+}
+
+// small device
+@media screen and (min-width: 768px) {}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    //height: 80vh;
+    width: auto;
+    // margin: 0;
+  }
+}
