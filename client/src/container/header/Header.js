@@ -11,7 +11,7 @@ import SearchForm from "../../component/search/SearchForm";
 import SeachOpenButton from "./SeachOpenButton";
 import { ModalContext } from "../../context/ModalContext";
 import { SearchContext } from "../../context/SearchContext";
-import { BusinessBox } from "../../component/header/business-box/BusinessBox";
+import { BusinessBox } from "../../component/business-box/BusinessBox";
 
 function Header({ isInHomePage = false }) {
   const [isVisible, setVisible] = useState(false);
