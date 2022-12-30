@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const LocationController = require('../../../TraveloServer/controllers/locationController');
+const LocationController = require('../controllers/locationController');
 
 /******************* GET PROVINCES TO SEARCH *******************/
 
