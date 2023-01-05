@@ -1,0 +1,47 @@
+.input-container {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+
+    text-align: center;
+    background: #fff;
+    height: 45px;
+    // border-radius: 50px;
+    border: 2px red;
+    background-color: #f8f8f8;
+
+    .chat-input {
+        border: none;
+        position: relative;
+        width: 100%;
+        font-family: inherit;
+        line-height: 35px;
+        color: #1a2948;
+        -webkit-font-smoothing: antialiased;
+        outline: none;
+        background: #f8f8f8;
+        display: inline-block;
+        margin: auto 10px;
+    }
+
+    .file-input {
+        input {
+            display: none;
+        }
+    }
+
+    .show {
+        display: block;
+    }
+
+    .emoji-list {
+        position: absolute;
+        bottom: 50px;
+        right: 10px;
+    }
+
+    .hidden {
+        display: none;
+        visibility: hidden;
+    }
+}
