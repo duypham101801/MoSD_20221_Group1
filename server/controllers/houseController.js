@@ -23,3 +23,16 @@ exports.getHouseDetail = async (req, res, next) => {
   }
 };
 
+// [GET] List of houses
+exports.getListHouses = async (req, res, next) => {
+    try {
+      const listHouses = await House.find({ areaId: req.params.areaId });
+  
+      res.status(200).json({
+        message: req.t('success'),
+        houses: listHouses,
+      });
+    } catch (error) {
+      return next(new ServerException(error));
+    }
+  };

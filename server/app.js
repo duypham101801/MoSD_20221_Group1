@@ -9,6 +9,7 @@ const Backend = require('i18next-fs-backend');
 const middleware = require('i18next-http-middleware');
 const AreaRouter = require("./routes/areaRouter");
 const LocationRouter = require("./routes/locationRouter");
+const HouseRouter = require('./routes/houseRouter');
 const ErrorHandler = require('./error/errorHandler');
 
 
@@ -39,6 +40,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/area', AreaRouter);
 app.use("/api/location", LocationRouter);
+app.use('/api/house', HouseRouter);
 
 
 // error handler
