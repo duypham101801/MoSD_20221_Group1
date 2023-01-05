@@ -1,9 +1,9 @@
 import { AxiosConfig } from "../config/AxiosConfig";
 
-
-export const getAreaServices = async (areaId) => {
-  const axios = AxiosConfig();
-  let api = `/file/area/list-files/${areaId}`;
+const axios = AxiosConfig();
+export const getHouseList = async (areaId) => {
+ 
+  let api = `/house/list-houses/${areaId}`;
   try {
     const res = await axios.get(api);
     return res.data;
@@ -12,9 +12,9 @@ export const getAreaServices = async (areaId) => {
   }
 };
 
-export const getHouseServices = async (houseId) => {
-  const axios = AxiosConfig();
-  let api = `/file/house/list-files/${houseId}`;
+export const getHouseDetail = async (houseId) => {
+ ;
+  let api = `/house/house-detail/${houseId}`;
   try {
     const res = await axios.get(api);
     return res.data;
@@ -22,3 +22,4 @@ export const getHouseServices = async (houseId) => {
     throw e.response.data;
   }
 };
+
