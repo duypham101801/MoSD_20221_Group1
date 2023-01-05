@@ -8,6 +8,8 @@ const Province = require('../models/province');
 const District = require('../models/district');
 const Location = require('../models/location');
 
+const ServerException = require('../utils/ServerException');
+
 const RE = new RegExp(process.env.API_URL, 'g');
 
 /** Manage Area
@@ -44,3 +46,15 @@ exports.getSearchAreas = async (req, res, next) => {
   }
 };
 
+// [GET] Area detail
+exports.getAreaDetail = async (req, res, next) => {
+  try {
+    const areaDetail = await Area.findById(req.params.areaId);
+    res.status(200).json({
+      message: req.t('success'),
+      area: areaDetail,
+    });
+  } catch (error) {
+    return next(new ServerException(error));
+  }
+};
