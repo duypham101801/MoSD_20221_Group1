@@ -7,7 +7,6 @@ import Input from "../../component/chat/Input";
 // open new tab
 function Chat() {
   const { roomId } = useParams();
-
   return (
     <section className="chat">
       <div className="container">
