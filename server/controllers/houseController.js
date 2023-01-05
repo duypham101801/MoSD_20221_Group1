@@ -23,14 +23,6 @@ exports.getHouseDetail = async (req, res, next) => {
   }
 };
 
-// [PUT] Update house detail
-router.put('/house-detail/:houseId', [
-  Authorization.authenToken(['sale']),
-  ResourceValidator.checkData(config.get('paramId.house')),
-  Validator.updateHouse,
-  HouseController.putHouseDetail,
-]);
-
 // [GET] List of houses
 exports.getListHouses = async (req, res, next) => {
     try {
