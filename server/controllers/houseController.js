@@ -30,3 +30,17 @@ router.put('/house-detail/:houseId', [
   Validator.updateHouse,
   HouseController.putHouseDetail,
 ]);
+
+// [GET] List of houses
+exports.getListHouses = async (req, res, next) => {
+    try {
+      const listHouses = await House.find({ areaId: req.params.areaId });
+  
+      res.status(200).json({
+        message: req.t('success'),
+        houses: listHouses,
+      });
+    } catch (error) {
+      return next(new ServerException(error));
+    }
+  };

@@ -16,3 +16,11 @@ router.get('/house-detail/:houseId', [
 ]);
 
 module.exports = router;
+
+const HouseController = require('../controllers/houseController');
+
+// [GET] List of houses
+router.get('/list-houses/:areaId', [
+    ResourceValidator.checkData(config.get('paramId.area')),
+    HouseController.getListHouses,
+  ]);
