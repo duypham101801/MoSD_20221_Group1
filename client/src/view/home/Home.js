@@ -11,9 +11,6 @@ function Home() {
       <div className="logo-container">
         <div className="title">
           <h1>Travelo</h1>
-          <p className="sub-title">
-            Hệ thống tìm kiếm và tư vấn booking các khu nghỉ dưỡng
-          </p>
         </div>
       </div>
       <div className="hero-content">

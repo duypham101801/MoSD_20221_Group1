@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useEffect, useRef,useState } from "react";
-import pippip from "../../../asset/pippip.png";
+import pippip from "../../asset/pippip.png";
 import { TbGridDots } from "react-icons/tb";
 export function BusinessBox() {
   const ref = useRef(null);

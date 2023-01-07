@@ -48,8 +48,12 @@ function AreaDetails() {
           <div className="area-name">
             <p className="name-title">Giá từ</p>
             <p className="area-price">
+<<<<<<< HEAD
               {formatCash(data.minPrice) + "-" + formatCash(data.maxPrice)}{" "}
               đ/đêm
+=======
+              {formatCash(data.minPrice) + "-" + formatCash(data.maxPrice)} đ/đêm
+>>>>>>> 7a6988e8f1503c7e65391e8b1410e26e0ad3bef0
             </p>
           </div>
           <button onClick={handleClick}>Tư vấn ngay</button>
@@ -113,3 +117,8 @@ function AreaDetails() {
 }
 
 export default AreaDetails;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 7a6988e8f1503c7e65391e8b1410e26e0ad3bef0
