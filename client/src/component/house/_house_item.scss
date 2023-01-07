@@ -1,0 +1,163 @@
+.house-item {
+  border-radius: 0.5rem;
+
+  display: flex;
+
+  flex-direction: column;
+  // max-width: 360px;
+  //box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+
+  /*
+      border-color: rgb(221, 223, 226);
+      border-style: solid;
+      border-width: 1px;
+      box-shadow: none;  */
+  background: white;
+
+  // dang dung
+  box-shadow: 0px 1px 2px rgb(3 18 26 / 20%);
+
+  .house-img {
+    width: 100%;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+
+    img {
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      // border-radius: 0.5rem;
+      object-fit: cover;
+      width: 100%;
+
+      height: 250px;
+    }
+  }
+
+  .house-content {
+    padding: 0.95rem;
+  }
+
+  .house-name {
+    margin: 0 0 0.8rem;
+    border-bottom: solid 1px rgb(221, 223, 226);
+    padding-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  .capacity {
+    margin: 0;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    .icon {
+      font-size: 22px;
+      font-weight: 400;
+    }
+  }
+
+  .intro-desc {
+    margin: 0;
+    // font-size: 14px;
+    letter-spacing: 0.004em;
+    color: #282828;
+    letter-spacing: 0.004em;
+    border-bottom: solid 1px rgb(221, 223, 226);
+
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 26px;
+    /* fallback */
+    height: 55px;
+    /* fallback */
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+  button {
+    margin-top: 0.8rem;
+    // width: 50%;
+    // max-width: 50%;
+    padding: 0.4rem 0.8rem;
+    border-radius: 18px;
+    font-size: 0.8rem;
+    color: white;
+    background-color: #1e62d8;
+    font-weight: 700;
+    border: none;
+  }
+
+  .intro-price {
+    padding: 0.4rem 0;
+    display: flex;
+    flex-direction: row;
+    // border-bottom: solid 1px rgb(221, 223, 226);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .room-type {
+      font-weight: 800;
+      // chinh width khi can
+      // width: 20%;
+    }
+
+    .house-price {
+      margin-top: 0.8rem;
+      margin-bottom: 0.5rem;
+      // text-align: right;
+      color: #ef0107;
+      font-weight: 700;
+      //line-height: 1.2rem;
+      font-size: 18px;
+      line-height: 1.5;
+      word-wrap: break-word;
+      width: 50%;
+
+      // width: 35%;
+      button {
+        padding: 0.5rem 1.2rem;
+        border-radius: 0.3rem;
+        color: white;
+        background-color: #1e62d8;
+        font-weight: 700;
+        border: none;
+        max-width: 30%;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (min-width: 486px) {
+  .house-item {
+    // width: 300px;
+    // height:auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .house-item {
+    // flex-basis: 40%;
+    //  width: 300px;
+    //  height: auto;
+
+    .intro-price {
+      .house-price {
+        width: 35%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .house-item {
+  }
+}
