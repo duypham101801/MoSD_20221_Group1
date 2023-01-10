@@ -10,6 +10,7 @@ const middleware = require('i18next-http-middleware');
 const AreaRouter = require("./routes/areaRouter");
 const LocationRouter = require("./routes/locationRouter");
 const HouseRouter = require('./routes/houseRouter');
+const ChatRouter = require('./routes/chatRouter');
 const ErrorHandler = require('./error/errorHandler');
 
 
@@ -41,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/area', AreaRouter);
 app.use("/api/location", LocationRouter);
 app.use('/api/house', HouseRouter);
-
+app.use('/api/chat', ChatRouter);
 
 // error handler
 app.use(ErrorHandler);
