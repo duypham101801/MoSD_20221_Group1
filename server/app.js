@@ -12,6 +12,8 @@ const LocationRouter = require("./routes/locationRouter");
 const HouseRouter = require('./routes/houseRouter');
 const ErrorHandler = require('./error/errorHandler');
 
+const AuthRouter = require('./routes/authRouter');
+
 
 i18next
   .use(Backend)
