@@ -14,7 +14,7 @@ import {
   cilStar,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
-
+import { Roles } from 'src/config/Roles'
 const _nav = [
   {
     component: CNavItem,
@@ -26,6 +26,89 @@ const _nav = [
       text: 'NEW',
     },
   },
+  {
+    component: CNavTitle,
+    name: 'Quản lý khu',
+    permission: [Roles.SALE],
+  },
+  {
+    component: CNavItem,
+    name: 'Danh sách khu',
+    to: '/areas',
+    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+    permission: [Roles.SALE],
+  },
+  {
+    component: CNavTitle,
+    name: 'Quản lý căn',
+    permission: [Roles.SALE],
+  },
+  {
+    component: CNavItem,
+    name: 'Danh sách căn',
+    to: '/houses',
+    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+    permission: [Roles.SALE],
+  },
+  {
+    component: CNavTitle,
+    name: 'Chat',
+    permission: [Roles.SALE],
+  },
+  {
+    component: CNavItem,
+    name: 'Tư vấn',
+    to: '/chat',
+    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+    permission: [Roles.SALE],
+  },
+  {
+    component: CNavItem,
+    name: 'Tư vấn theo SDT',
+    to: '/chat/phone',
+    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+    permission: [Roles.SALE],
+  },
+  {
+    component: CNavTitle,
+    name: 'Tài khoản',
+    permission: [Roles.ADMIN],
+  },
+  {
+    component: CNavItem,
+    name: 'Quản lý tài khoản',
+    to: '/accounts',
+    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+    permission: [Roles.ADMIN],
+  },
+  {
+    component: CNavTitle,
+    name: 'Quản lý danh mục',
+    permission: [Roles.EDITOR],
+  },
+  {
+    component: CNavGroup,
+    name: 'Danh mục',
+    icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+    permission: [Roles.EDITOR],
+    items: [
+      {
+        component: CNavItem,
+        name: 'Danh mục khu',
+        to: '/category/area',
+        icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+        permission: [Roles.EDITOR],
+      },
+      {
+        component: CNavItem,
+        name: 'Danh mục căn',
+        to: '/category/house',
+        icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+        permission: [Roles.EDITOR],
+      },
+    ],
+  },
+  /*
   {
     component: CNavTitle,
     name: 'Theme',
@@ -299,7 +382,10 @@ const _nav = [
     name: 'Docs',
     href: 'https://coreui.io/react/docs/templates/installation/',
     icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
-  },
+  }, */
 ]
 
 export default _nav
+/*
+   
+*/
