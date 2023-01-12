@@ -13,6 +13,8 @@ const HouseRouter = require('./routes/houseRouter');
 const ChatRouter = require('./routes/chatRouter');
 const ErrorHandler = require('./error/errorHandler');
 
+const AuthRouter = require('./routes/authRouter');
+
 
 i18next
   .use(Backend)
@@ -39,6 +41,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/api/auth', AuthRouter);
 app.use('/api/area', AreaRouter);
 app.use("/api/location", LocationRouter);
 app.use('/api/house', HouseRouter);
