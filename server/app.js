@@ -12,6 +12,7 @@ const LocationRouter = require("./routes/locationRouter");
 const HouseRouter = require('./routes/houseRouter');
 const ChatRouter = require('./routes/chatRouter');
 const ErrorHandler = require('./error/errorHandler');
+const CategoryRouter = require('./routes/categoryRouter');
 
 const AuthRouter = require('./routes/authRouter');
 
@@ -46,6 +47,7 @@ app.use('/api/area', AreaRouter);
 app.use("/api/location", LocationRouter);
 app.use('/api/house', HouseRouter);
 app.use('/api/chat', ChatRouter);
+app.use('/api/category', CategoryRouter);
 
 // error handler
 app.use(ErrorHandler);
