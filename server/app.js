@@ -10,7 +10,12 @@ const middleware = require('i18next-http-middleware');
 const AreaRouter = require("./routes/areaRouter");
 const LocationRouter = require("./routes/locationRouter");
 const HouseRouter = require('./routes/houseRouter');
+const ChatRouter = require('./routes/chatRouter');
+const ImageRouter = require('./routes/imageRouter');
 const ErrorHandler = require('./error/errorHandler');
+const CategoryRouter = require('./routes/categoryRouter');
+
+const AuthRouter = require('./routes/authRouter');
 
 
 i18next
@@ -38,10 +43,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/api/auth', AuthRouter);
 app.use('/api/area', AreaRouter);
 app.use("/api/location", LocationRouter);
 app.use('/api/house', HouseRouter);
-
+app.use('/api/chat', ChatRouter);
+app.use('/api/chat', ChatRouter);
+app.use('/api/image', ImageRouter);
+app.use('/api/category', CategoryRouter);
 
 // error handler
 app.use(ErrorHandler);
