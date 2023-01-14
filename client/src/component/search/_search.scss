@@ -1,0 +1,146 @@
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-form {
+  width: 100%;
+  display: flex;
+  max-width: 770px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 4px 0px 4px 0px;
+  border-radius: 40px;
+  background: #fff;
+  border: 1px solid #dfe1e5;
+  box-shadow: none;
+  flex-direction: row;
+
+  .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    // padding: 0 1.5rem;
+    border-radius: 4px;
+    // border: none;
+
+    // width: 80%;
+    .select {
+      width: 80%;
+    }
+
+    select {
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .icon {
+      font-size: 1.5rem;
+    }
+  }
+
+  .submit {
+    padding-left: 15px;
+  }
+
+  .vertical {
+    border-left: 1px solid #ddd;
+    height: 32px;
+    // margin-top: 10px;
+    margin: 6px 5px 0px 5px;
+  }
+
+  button {
+    cursor: pointer;
+    color: white;
+    // font-size: 1.05rem;
+    background-color: #1e62d8;
+    font-weight: 700;
+    border-radius: 27px;
+    font-size: 14px;
+    height: 48px;
+    padding: 16px 16px;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.3s ease-in-out;
+
+    svg {
+      font-size: 1rem;
+    }
+  }
+
+  .but-submit:hover {
+    background: #005999;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search-form {
+    // .search-form {
+    flex-direction: column;
+    padding: 1.2rem 1rem;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80vw;
+
+    // box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 2px 6px 2px;
+    .vertical {
+      display: none;
+    }
+
+    .submit {
+      padding-left: 0px;
+    }
+
+    .hero-container {
+      width: 100%;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      padding: 0 0.4rem 0 1rem;
+      border-radius: 4px;
+      border-color: rgb(221, 223, 226);
+      border-style: solid;
+      border-width: 1px;
+      box-shadow: none;
+      // width: 80%;
+
+      .select {
+        width: 100%;
+      }
+    }
+
+    .submit {
+      width: 100%;
+    }
+
+    button {
+      // padding: 0.5rem;
+      padding: 0.6rem 1.5rem;
+      // font-size: 1.1rem;
+      height: 38px;
+      width: 100%;
+      border-radius: 5px;
+
+      svg {
+        width: 30px;
+        font-size: 18px;
+      }
+    }
+
+    /*button:hover{
+      color: #03045e;
+    }*/
+  }
+}
+
+@media screen and (max-width: 390px) {
+}
