@@ -14,7 +14,7 @@ const ChatRouter = require('./routes/chatRouter');
 const ImageRouter = require('./routes/imageRouter');
 const ErrorHandler = require('./error/errorHandler');
 const CategoryRouter = require('./routes/categoryRouter');
-
+const AccountRouter = require('./routes/accountRouter');
 const AuthRouter = require('./routes/authRouter');
 
 
@@ -51,6 +51,7 @@ app.use('/api/chat', ChatRouter);
 app.use('/api/chat', ChatRouter);
 app.use('/api/image', ImageRouter);
 app.use('/api/category', CategoryRouter);
+app.use('/api/account', AccountRouter);
 
 // error handler
 app.use(ErrorHandler);
