@@ -128,6 +128,29 @@ exports.getProfile = async (req, res, next) => {
     }
 };
 
+// [PUT] Update profile
+exports.putProfile = async (req, res, next) => {
+    try {
+      const { name, phone } = req.body;
+  
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return next(new ValidationException(errors.array()));
+      }
+  
+      await User.findByIdAndUpdate(req.user._id, {
+        name,
+        phone,
+      });
+  
+      res.status(200).json({
+        message: req.t('update_success'),
+      });
+    } catch (error) {
+      return next(new ServerException(error));
+    }
+  };
+
 // [POST] Logout
 exports.postLogout = async (req, res, next) => {
     try {
