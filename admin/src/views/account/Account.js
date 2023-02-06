@@ -19,7 +19,7 @@ const { Option } = Select
 const tailLayout = {
   wrapperCol: { offset: 8, span: 16 },
 }
-// Cac api get list nen co pagination, make editable row to update
+// Cac api get list nen co pagination , make editable row to update
 function Account() {
   const [pagination, setPagination] = useState({
     current: 1,
