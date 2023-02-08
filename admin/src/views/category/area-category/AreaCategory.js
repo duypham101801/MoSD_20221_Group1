@@ -137,9 +137,108 @@ function AreaCategory() {
   }
 
   // update
-  const onUpdate = async () => {}
+  const onUpdate = async () => {
+    const values = await form.validateFields()
+    // lay tu form item
+    const areaId = values._id
+    let inputs = {
+      categoryName: values.category,
+    }
 
-  const onDelete = async () => {}
+    const updateCategory = async () => {
+      try {
+        const res = await updateAreaCategory(areaId, inputs)
+        if (res) {
+          const data = await getAreaCategories()
+          if (data.categories) {
+            let key = 1
+            data.categories.forEach((category) => {
+              category.key = key++
+            })
+            setData(data.categories)
+          }
+          setVisible(false)
+          notification.success({
+            message: `Notification`,
+            description: `${res.message}`,
+            placement: `bottomRight`,
+            duration: 1.5,
+          })
+        }
+      } catch (err) {
+        if (err.status === 401 && err.statusText === 'Unauthorized') {
+          getToken(updateCategory)
+        } else
+          notification.error({
+            message: `Error`,
+            description: err.validationErrors
+              ? `${Object.values(err.validationErrors)[0]}`
+              : err.message,
+            placement: `bottomRight`,
+            duration: 1.5,
+          })
+      }
+    }
+    updateCategory()
+  }
+
+  const onDelete = async () => {
+    Modal.confirm({
+      title: `Delete Area Category`,
+      icon: <ExclamationCircleOutlined />,
+      content: `You are going to delete this category? Are you sure you want to do this? You can't reverse this`,
+      async onOk() {
+        const values = await form.validateFields()
+        // lay tu form item
+        const areaId = values._id
+        const deleteCategory = async () => {
+          try {
+            const res = await deleteAreaCategory(areaId)
+            if (res) {
+              const data = await getAreaCategories()
+              if (data.categories) {
+                let key = 1
+                data.categories.forEach((category) => {
+                  category.key = key++
+                })
+                setData(data.categories)
+              }
+              setVisible(false)
+              notification.success({
+                message: `Notification`,
+                description: `${res.message}`,
+                placement: `bottomRight`,
+                duration: 1.5,
+              })
+            }
+          } catch (err) {
+            if (err.status === 401 && err.statusText === 'Unauthorized') {
+              getToken(deleteCategory)
+            } else
+              notification.error({
+                message: `Error`,
+                description: err.validationErrors
+                  ? `${Object.values(err.validationErrors)[0]}`
+                  : err.message,
+                placement: `bottomRight`,
+                duration: 1.5,
+              })
+          }
+        }
+        deleteCategory()
+      },
+      onCancel() {
+        notification.info({
+          message: `Notification`,
+          description: `Cancel delete area category`,
+          placement: `bottomRight`,
+          duration: 1.5,
+        })
+        setVisible(false)
+      },
+      centered: true,
+    })
+  }
 
   useEffect(() => {
     const getCategory = async () => {
