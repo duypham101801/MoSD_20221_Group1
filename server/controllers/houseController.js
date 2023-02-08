@@ -94,3 +94,75 @@ exports.putHouseDetail = async (req, res, next) => {
     return next(new ServerException(error));
   }
 };
+
+// [PUT] Change avatar
+exports.putChangeAvatar = async (req, res, next) => {
+  try {
+    const pathAvatar = req.file.path.replace(/\\/g, '/');
+    let checkHouse = await House.findById(req.params.houseId);
+
+    const oldPathAvatar = checkHouse.urlAvatar.replace(RE, 'public');
+    if (fs.existsSync(oldPathAvatar)) {
+      fs.unlinkSync(oldPathAvatar);
+    }
+
+    await House.findByIdAndUpdate(req.params.houseId, {
+      urlAvatar: `${process.env.API_URL}${pathAvatar.replace(/public/, '')}`,
+    });
+
+    res.status(200).json({
+      message: req.t('change_success'),
+    });
+  } catch (error) {
+    return next(new ServerException(error));
+  }
+};
+
+// [DELETE] Delete house
+exports.deleteHouse = async (req, res, next) => {
+  try {
+    const houseId = req.params.houseId;
+
+    const house = await House.findById(houseId);
+    const houseFiles = await HouseFile.find({ houseId });
+    const houseImages = await HouseImage.find({ houseId });
+
+    if (houseFiles.length > 0) {
+      houseFiles.map((file) => {
+        const pathFile = file.urlFile.replace(RE, 'public');
+        const pathThumb = file.urlThumb.replace(RE, 'public');
+
+        if (fs.existsSync(pathFile)) {
+          fs.unlinkSync(pathFile);
+        }
+        if (fs.existsSync(pathThumb)) {
+          fs.unlinkSync(pathThumb);
+        }
+      });
+
+      await HouseFile.deleteMany({ houseId });
+    }
+
+    if (houseImages.length > 0) {
+      houseImages.map((image) => {
+        const pathImage = image.url.replace(RE, 'public');
+        if (fs.existsSync(pathImage)) {
+          fs.unlinkSync(pathImage);
+        }
+      });
+      await HouseImage.deleteMany({ houseId });
+    }
+
+    const pathAvatar = house.urlAvatar.replace(RE, 'public');
+    if (fs.existsSync(pathAvatar)) {
+      fs.unlinkSync(pathAvatar);
+    }
+    await House.findByIdAndDelete(houseId);
+
+    res.status(200).json({
+      message: req.t('delete_success'),
+    });
+  } catch (error) {
+    return next(new ServerException(error));
+  }
+};
