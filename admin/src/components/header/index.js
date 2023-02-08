@@ -1,3 +1,4 @@
 import AppHeaderDropdown from './AppHeaderDropdown'
-
-export { AppHeaderDropdown }
+import LanguageDropdown from './LanguageDropdown'
+import NotificationDropdown from './NotificationDropdown'
+export { AppHeaderDropdown, LanguageDropdown, NotificationDropdown }
