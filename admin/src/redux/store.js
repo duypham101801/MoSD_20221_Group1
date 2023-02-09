@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 import { userReducer } from 'src/redux/reducers'
 import { legacy_createStore as createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import thunkMiddleware from 'redux-thunk'
@@ -7,14 +6,6 @@ import storage from 'redux-persist/lib/storage'
 const initialState = {
   sidebarShow: true,
 }
-=======
-import { createStore } from 'redux'
-
-const initialState = {
-  sidebarShow: true,
-}
-
->>>>>>> Stashed changes
 const changeState = (state = initialState, { type, ...rest }) => {
   switch (type) {
     case 'set':
@@ -24,7 +15,6 @@ const changeState = (state = initialState, { type, ...rest }) => {
   }
 }
 
-<<<<<<< Updated upstream
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 const persistConfig = {
@@ -49,7 +39,3 @@ export const store = createStore(
 )
 
 export const persistor = persistStore(store)
-=======
-const store = createStore(changeState)
-export default store
->>>>>>> Stashed changes

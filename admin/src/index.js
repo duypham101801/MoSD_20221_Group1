@@ -5,11 +5,22 @@ import { createRoot } from 'react-dom/client'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { Provider } from 'react-redux'
-import store from './redux/store'
-
+import AppProvider from './context/AppProvider'
+import { AuthContextProvider } from './context/AuthContext'
+import { SearchContextProvider } from './context/SearchContext'
+import { store, persistor } from './redux/store'
+import { PersistGate } from 'redux-persist/integration/react'
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-    <App />
+    <PersistGate loading={null} persistor={persistor}>
+      <AuthContextProvider>
+        <SearchContextProvider>
+          <AppProvider>
+            <App />
+          </AppProvider>
+        </SearchContextProvider>
+      </AuthContextProvider>
+    </PersistGate>
   </Provider>,
 )
 
