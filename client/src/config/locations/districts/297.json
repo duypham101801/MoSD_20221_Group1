@@ -1,0 +1,124 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Quận Ba Đình"
+        },
+        {
+            "id": 10,
+            "name": "Quận Hoàn Kiếm"
+        },
+        {
+            "id": 11,
+            "name": "Quận Hai Bà Trưng"
+        },
+        {
+            "id": 12,
+            "name": "Quận Đống Đa"
+        },
+        {
+            "id": 13,
+            "name": "Quận Cầu Giấy"
+        },
+        {
+            "id": 14,
+            "name": "Quận Long Biên"
+        },
+        {
+            "id": 2,
+            "name": "Quận Hoàng Mai"
+        },
+        {
+            "id": 3,
+            "name": "Huyện Sóc Sơn"
+        },
+        {
+            "id": 4,
+            "name": "Quận Bắc Từ Liêm"
+        },
+        {
+            "id": 5,
+            "name": "Huyện Thanh Trì"
+        },
+        {
+            "id": 6,
+            "name": "Huyện Gia Lâm"
+        },
+        {
+            "id": 676,
+            "name": "Huyện Ba Vì"
+        },
+        {
+            "id": 677,
+            "name": "Huyện Chương Mỹ"
+        },
+        {
+            "id": 678,
+            "name": "Huyện Đan Phượng"
+        },
+        {
+            "id": 679,
+            "name": "Huyện Hoài Đức"
+        },
+        {
+            "id": 680,
+            "name": "Huyện Mỹ Đức"
+        },
+        {
+            "id": 681,
+            "name": "Huyện Phú Xuyên"
+        },
+        {
+            "id": 682,
+            "name": "Huyện Phúc Thọ"
+        },
+        {
+            "id": 683,
+            "name": "Huyện Quốc Oai"
+        },
+        {
+            "id": 684,
+            "name": "Huyện Thạch Thất"
+        },
+        {
+            "id": 685,
+            "name": "Huyện Thanh Oai"
+        },
+        {
+            "id": 686,
+            "name": "Huyện Thường Tín"
+        },
+        {
+            "id": 687,
+            "name": "Huyện Ứng Hòa"
+        },
+        {
+            "id": 688,
+            "name": "Huyện Mê Linh"
+        },
+        {
+            "id": 689,
+            "name": "Quận Hà Đông"
+        },
+        {
+            "id": 690,
+            "name": "Thị xã Sơn Tây"
+        },
+        {
+            "id": 7,
+            "name": "Huyện Đông Anh"
+        },
+        {
+            "id": 724,
+            "name": "Quận Nam Từ Liêm"
+        },
+        {
+            "id": 8,
+            "name": "Quận Thanh Xuân"
+        },
+        {
+            "id": 9,
+            "name": "Quận Tây Hồ"
+        }
+    ]
+}

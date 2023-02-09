@@ -1,0 +1,291 @@
+ .area-sticky {
+   position: fixed;
+   bottom: 0;
+   padding: 0.2rem;
+   z-index: 99;
+   background: white;
+   width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   // box-shadow: rgb(9 30 66 / 25%) 0px 1px 1px, rgb(9 30 66 / 13%) 0px 0px 1px 1px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+
+   .area-name {
+     padding: 0.3rem 0;
+
+
+
+
+     p {
+       margin: 0;
+       font-size: 0.8rem;
+     }
+
+     .area-price {
+       color: #ef0107;
+       font-weight: 700;
+       font-size: 0.9rem;
+       width: 50vw;
+     }
+   }
+
+   button {
+     padding: 0.5rem 1rem;
+     cursor: pointer;
+     border: none;
+     color: white;
+     background-color: #1e62d8;
+     border-radius: 0.3rem;
+     font-size: 0.9rem;
+     height: 30%;
+   }
+ }
+
+ .area-details {
+   padding: 50px 0.5rem 100px;
+
+   margin: 0;
+
+
+
+
+   .container {
+     display: flex;
+     // align-items: center;
+     flex-direction: column;
+     // gap: 20px 0;
+   }
+
+   .title {
+     font-size: 28px;
+     line-height: 45px;
+     margin: 0;
+     // border-top: solid 1px rgb(221, 223, 226);
+     // font-size: 28px;
+     // line-height: 35px;
+     letter-spacing: 0.004em;
+     background: white;
+
+   }
+
+   .area-desc {
+     font-size: 16px;
+     line-height: 1.4;
+     opacity: 0.9;
+
+   }
+
+   .area-info {
+     // box-shadow: rgb(67 71 85 / 27%) 0px 0px 0.25em, rgb(90 125 188 / 5%) 0px 0.25em 1em;
+     padding: 1rem 1rem 0;
+
+     background: white;
+     border-radius: 8px;
+     // border-color: rgb(221, 223, 226);
+     // border-style: solid;
+     // border-width: 1px;
+     // box-shadow: none;
+
+
+
+   }
+
+   .break {
+     // rgb(221, 221, 221);
+     border-top: 0.3px solid rgb(209, 209, 214);
+     width: 100%;
+     margin-top: 32px;
+     margin-bottom: 32px;
+   }
+
+
+   button {
+     padding: 10px 18px;
+     cursor: pointer;
+     border: none;
+     color: white;
+     background-color: #1e62d8;
+     font-weight: 700;
+
+     border-radius: 0.3rem;
+   }
+
+
+
+   .area-heading {
+     margin: 1rem 0 0.8rem 0rem;
+     font-size: 32px;
+     line-height: 1.4;
+   }
+
+   .houses {
+     // box-shadow: rgb(67 71 85 / 27%) 0px 0px 0.25em, rgb(90 125 188 / 5%) 0px 0.25em 1em;
+     background: white;
+     border-radius: 8px;
+     padding: 0rem 1rem;
+
+     width: 100%;
+
+     .house-list {
+
+       // grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+       // padding: 0.6rem;
+       padding: 1.5rem 0;
+       display: grid;
+
+       align-items: center;
+       // gap: 2rem 0.5rem;
+
+       // margin: 1rem 0.5rem;
+
+
+
+     }
+
+   }
+
+   .services {
+     // box-shadow: rgb(67 71 85 / 27%) 0px 0px 0.25em, rgb(90 125 188 / 5%) 0px 0.25em 1em;
+     background: white;
+     border-radius: 8px;
+     padding: 1rem;
+
+     width: 100%;
+
+     .service-list {
+
+       display: grid;
+       // grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+       align-items: center;
+       padding: 1.5rem 0;
+       gap: 1.2rem 0.5rem;
+
+
+
+
+     }
+   }
+ }
+
+
+
+ @media screen and (min-width: 768px) and (max-width: 1200px) {
+   .area-details {
+     .container {
+
+       .area-info {
+         .area-name {}
+
+         .area-desc {}
+       }
+
+
+
+       .houses {
+         .house-list {
+
+           // grid-template-columns: repeat(3, auto);
+           //gap: 1.2rem 1.8rem;
+
+
+         }
+       }
+
+       .services {
+         .service-list {
+           // grid-template-columns: repeat(3, auto);
+           gap: 1.2rem 1.8rem;
+
+
+         }
+       }
+     }
+   }
+ }
+
+ @media screen and (min-width: 1201px) {
+   .area-sticky {
+
+     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+     background-color: rgba(255, 255, 255, 1.00);
+
+     // box-shadow: none;
+     border: none;
+     position: fixed;
+     height: 70px;
+     padding: 10px;
+     width: 100%;
+
+     button {
+       height: 65%;
+       padding: 0px 25px 0px;
+     }
+   }
+
+   .area-details {
+     // padding: 90px 110px 100px 80px;
+     // fix if
+      margin: 0 150px;
+
+
+     .container {
+       // padding: 0px 50px;
+
+
+       .title {
+         border-top-right-radius: 8px;
+         border-top-left-radius: 8px;
+         // padding: 2rem 0 1.5rem 0rem;
+         margin: 0;
+       }
+
+       .area-info {
+         margin: 0rem 0;
+         width: 100%;
+
+         .area-name {}
+
+         .area-desc {}
+       }
+
+
+
+       /*  hide sticky
+     .area-sticky{
+      display: none;
+    }
+    */
+
+
+       .houses {
+         .house-list {
+
+
+           // justify-content: space-around;
+           // grid-template-columns: repeat(3, 340px);
+           //gap: 1.4rem 10px;
+           background: white;
+
+
+         }
+
+       }
+
+       .services {
+         padding: 0 0 0 1rem;
+
+         .service-list {
+           width: 100%;
+           // align-items: center;
+           // justify-content: space-around;
+           // grid-template-columns: repeat(3, auto);
+           gap: 1.4rem 0.9rem;
+           background: white;
+
+
+         }
+       }
+     }
+   }
+ }

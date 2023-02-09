@@ -29,4 +29,13 @@ export const getAreaList = async (data) => {
   }
 };
 
-
+export const getAreaDetail = async (areaId) => {
+  
+  let api = `/area/area-detail/${areaId}`;
+  try {
+    const res = await axios.get(api);
+    return res.data;
+  } catch (e) {
+    throw e.response.data;
+  }
+};
