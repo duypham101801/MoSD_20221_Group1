@@ -1,0 +1,179 @@
+.box-chat {
+    background: white;
+    padding: 0;
+}
+
+.chat-content {
+    height: 100%;
+
+    .message-container {
+        border-radius: 10px;
+        height: 65vh;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+
+        h3 {
+            text-align: center;
+            font-size: 1.8rem;
+
+        }
+
+        .local {
+            width: 100%;
+
+            .local-message {
+                margin-top: 10px;
+                background-color: #1464f4;
+                color: white;
+                display: block;
+                overflow-wrap: break-word;
+                border-radius: 10px;
+                float: right;
+                margin-right: 20px;
+                font-size: 12pt;
+                line-height: 15pt;
+                max-width: 85%;
+                outline: none;
+                padding: 6pt 9pt;
+            }
+        }
+
+        .remote-message {
+            font-size: inherit;
+            font-weight: 400;
+            color: #666;
+            overflow-wrap: break-word;
+            display: block;
+            padding: 12px 16px;
+
+            .remote-info {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: row;
+
+                img {
+                    width: 60px;
+                    height: 50px;
+                }
+
+                .remote-img {
+                    border-radius: 10px;
+                    color: #999;
+                    font-size: 1.5 rem;
+                    font-family: inherit;
+                    margin-bottom: 8px;
+                    width: 25px;
+                    height: 25px;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+                }
+
+                .remote-name {
+                    margin-left: 8px;
+                    padding-bottom: 3px;
+                    padding-top: 0px;
+                }
+            }
+        }
+
+        .text-message {
+            display: block;
+            width: max-content;
+            overflow-wrap: break-word;
+            border-radius: 10px;
+            color: rgb(0, 0, 1);
+            background-color: rgba(0, 0, 0, 0.06);
+            margin-left: 20px;
+            font-size: 12pt;
+            line-height: 15pt;
+            // margin: 1pt 0;
+            max-width: 85%;
+            outline: none;
+            padding: 6pt 9pt;
+        }
+    }
+
+    .chat-container {
+        position: relative;
+        margin-top: 5px;
+        width: 100%;
+        display: inline-flex;
+        text-align: center;
+        background: #fff;
+        height: 45px;
+        border-top: 1px solid rgba(204, 207, 214, 0.5019607843);
+        // border: 2px red;
+        // background-color: #f8f8f8;
+
+        .chat-input {
+            border: none;
+            position: relative;
+            width: 100%;
+            font-family: inherit;
+            line-height: 35px;
+            color: #1a2948;
+            -webkit-font-smoothing: antialiased;
+            outline: none;
+            // background: #f8f8f8;
+            display: inline-block;
+            margin: auto 10px;
+        }
+
+        .file-input {
+            input {
+                display: none;
+            }
+        }
+
+        .show {
+            display: block;
+        }
+
+        .emoji-list {
+            position: absolute;
+            bottom: 50px;
+            right: 10px;
+        }
+
+        .hidden {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}
+
+.chat-header {
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0px 15px;
+    border-bottom: 1px solid rgba(204, 207, 214, 0.5019607843137255);
+    color: #999;
+
+    .chat-img {
+        border-radius: 10px;
+        color: #999;
+        font-size: 1.5 rem;
+        font-family: inherit;
+        margin-bottom: 8px;
+        width: 30px;
+        height: 30px;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+}
