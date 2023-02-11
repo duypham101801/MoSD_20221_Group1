@@ -14,9 +14,9 @@ const ChatRouter = require('./routes/chatRouter');
 const ImageRouter = require('./routes/imageRouter');
 const ErrorHandler = require('./error/errorHandler');
 const CategoryRouter = require('./routes/categoryRouter');
-
+const AccountRouter = require('./routes/accountRouter');
 const AuthRouter = require('./routes/authRouter');
-
+const FileRouter = require("./routes/fileRouter");
 
 i18next
   .use(Backend)
@@ -51,6 +51,8 @@ app.use('/api/chat', ChatRouter);
 app.use('/api/chat', ChatRouter);
 app.use('/api/image', ImageRouter);
 app.use('/api/category', CategoryRouter);
+app.use('/api/account', AccountRouter);
+app.use('/api/file', FileRouter);
 
 // error handler
 app.use(ErrorHandler);

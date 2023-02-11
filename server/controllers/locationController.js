@@ -10,6 +10,17 @@ const ServerException = require('../utils/ServerException');
 
 /*** GET PROVINCES TO SEARCH ***/
 
+// [GET] List locations
+exports.getListLocations = async (req, res, next) => {
+  try {
+    const locations = await Location.findLocationValid();
+
+    res.status(200).send(locations);
+  } catch (error) {
+    return next(new ServerException(error));
+  }
+};
+
 // [GET] List provinces
 exports.getListProvinces = async (req, res, next) => {
   try {
@@ -35,7 +46,7 @@ exports.getListProvinces = async (req, res, next) => {
   }
 };
 
-// [GET] List districts
+// [GET] List provinces
 exports.getListDistricts = async (req, res, next) => {
   try {
     const districts = await Location.findDistricts(req.query.provinceName);
@@ -46,5 +57,35 @@ exports.getListDistricts = async (req, res, next) => {
   }
 };
 
+/*** GET PROVINCES TO ADD AREA ***/
 
+// [GET] Provinces API ( full province, district)
+exports.getQueryLocations = async (req, res, next) => {
+  try {
+    const locations = await District.provinceAPI();
 
+    res.status(200).send(locations);
+  } catch (error) {
+    return next(new ServerException(error));
+  }
+};
+
+// [GET] Get provinces
+exports.getQueryProvinces = async (req, res, next) => {
+  try {
+    const provinces = await Province.queryProvinces();
+    res.status(200).send(provinces);
+  } catch (error) {
+    return next(new ServerException(error));
+  }
+};
+
+// [GET] Get district
+exports.getQueryDistricts = async (req, res, next) => {
+  try {
+    const districts = await District.queryDistricts(req.query.provinceId);
+    res.status(200).send(districts);
+  } catch (error) {
+    return next(new ServerException(error));
+  }
+};
