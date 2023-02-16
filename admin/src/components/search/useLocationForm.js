@@ -150,59 +150,9 @@ function useLocationForm(shouldFetchInitialLocation, setData) {
       }
     })
   }
-
-  async function handleSubmit(e) {
-    e.preventDefault()
-    const searchState = {}
-    let res
-    if (selectedCity) {
-      // ten tp
-      searchState.provinceName = selectedCity.value
-    }
-    if (selectedDistrict) {
-      // ten quan
-      searchState.districtName = selectedDistrict.value
-    }
-    /*
-    if (!isMatchPath) {
-      try {
-        res = await getHouseList(selectedArea.value)
-        if (res.listHouses) {
-          let key = 1
-          res.listHouses.forEach((house) => {
-            house.key = key++
-          })
-          setData(res.listHouses)
-        }
-      } catch (err) {
-        notification.error({
-          message: `Error`,
-          description: `${err.message}`,
-          placement: `bottomRight`,
-          duration: 1.5,
-        })
-      }
-    } else {
-      try {
-        res = await getAreaList({ province: selectedCity.label, district: selectedDistrict.label })
-        if (res.areas) {
-          let key = 1
-          res.areas.forEach((area) => {
-            area.key = key++
-          })
-          setData(res.areas)
-        }
-      } catch (err) {
-        notification.error({
-          message: `Error`,
-          description: `${err.message}`,
-          placement: `bottomRight`,
-          duration: 1.5,
-        })
-      }
-    } */
+  const getArea = async (province, district) => {
     try {
-      res = await getAreaList({ province: selectedCity.label, district: selectedDistrict.label })
+      let res = await getAreaList({ province: province, district: district })
       if (res.areas) {
         let key = 1
         res.areas.forEach((area) => {
@@ -218,6 +168,22 @@ function useLocationForm(shouldFetchInitialLocation, setData) {
         duration: 1.5,
       })
     }
+  }
+  function handleSubmit(e) {
+    e.preventDefault()
+    const searchState = {}
+    let res
+    if (selectedCity) {
+      // ten tp
+      searchState.provinceName = selectedCity.value
+    }
+    if (selectedDistrict) {
+      // ten quan
+      searchState.districtName = selectedDistrict.value
+    }
+    const province = selectedCity.label
+    const district = selectedDistrict.label
+    getArea(province, district)
     dispatch({ type: 'NEW_SEARCH', payload: searchState })
     localStorage.setItem('search', JSON.stringify(searchState))
   }
